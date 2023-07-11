@@ -33,11 +33,16 @@ global.YouTubePlayer = YouTubePlayer;
         });
 
         videoPlayerDict[playerElem.getAttribute('value')] = player;
+
+        let controllerElem = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"] > .ytplayer-controller`);
+        controllerElem.querySelector('.playStop').addEventListener('click', () => {
+            playPauseVideo(playerElem.getAttribute('value'));
+        });
     }
 
     console.log(videoPlayerDict);
 
-    function playPauseVideo(playerId, playFlg) {
+    function playPauseVideoBasic(playerId, playFlg) {
         console.log(playFlg)
         if (playFlg == 1) {
             videoPlayerDict[playerId].playVideo();
@@ -45,7 +50,18 @@ global.YouTubePlayer = YouTubePlayer;
             videoPlayerDict[playerId].pauseVideo();
         }
     }
-    
+
+    async function playPauseVideo(playerId) {
+        let playFlg = null;
+        let playerState = await videoPlayerDict[playerId].getPlayerState();
+        if (playerState == 1) {
+            playFlg = 0;  // pause video
+        } else if (playerState == 2 || playerState == 5) {
+            playFlg = 1;  // play video
+        }
+        playPauseVideoBasic(playerId, playFlg);
+    }
+
     const allPlayPauseBtn = document.getElementById('allPlayStop');
     allPlayPauseBtn.addEventListener('click', async () => {
         const playerIdList = Object.keys(videoPlayerDict);
@@ -61,7 +77,7 @@ global.YouTubePlayer = YouTubePlayer;
         console.log(playerIdList);
 
         for (let i=0; i<playerIdList.length; i++) {
-            playPauseVideo(playerIdList[i], playFlg);
+            playPauseVideoBasic(playerIdList[i], playFlg);
         }
     });
 })();
