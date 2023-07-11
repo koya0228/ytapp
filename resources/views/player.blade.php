@@ -4,6 +4,11 @@
     @if (!$ytdatas)
         <p>no data</p>
     @else
+        <div id="allController">
+            <button id="allBack"><</button>
+            <button id="allPlayStop">O</button>
+            <button id="allForward">></button>
+        </div>
         <div id="ytplayerOuter" class="ytplayer-outer">
             @foreach ($ytdatas as $ytdata)
                 <div class="ytplayer-container">
