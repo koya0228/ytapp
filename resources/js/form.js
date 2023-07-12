@@ -8,6 +8,7 @@
         const urlInputBoxesNum = urlInputBoxes.length;
 
         if (urlInputBoxesNum < 6) {
+            const newInputLabel = document.createElement('label');
             const newInputBox = document.createElement('div');
 
             const inputText = document.createElement('input');
@@ -19,12 +20,17 @@
             deleteBtn.setAttribute('type', 'button');
 
             deleteBtn.addEventListener('click', () => {
-                newInputBox.remove();
+                newInputLabel.remove();
             });
+
+            const labelText = document.createElement('p');
+            labelText.innerText = `YouTube url ${urlInputBoxesNum + 1}`;
 
             newInputBox.appendChild(inputText);
             newInputBox.appendChild(deleteBtn);
-            addFormBtn.before(newInputBox);
+            newInputLabel.appendChild(labelText);
+            newInputLabel.appendChild(newInputBox);
+            addFormBtn.before(newInputLabel);
         }
     });
 })();

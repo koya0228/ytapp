@@ -3,17 +3,19 @@
     <head>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        @vite(['resources/css/layout.css'])
+        @yield('load-css')
 
         <title>YT APP</title>
     </head>
     <body>
-        <header>
+        <header id="header">
 
         </header>
-        <main>
+        <main id="main">
             @yield('contents')
         </main>
-        <footer>
+        <footer id="footer">
 
         </footer>
         @yield('load-js')

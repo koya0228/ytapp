@@ -1,0 +1,30 @@
+*,*::before,*::after{box-sizing:border-box;}*{padding:0;margin:0;line-height:1.6;}html,body{height:100%;}html{font-size:16px;}body{font-family:"游ゴシック体","YuGothic","游ゴシック","YuGothic","ヒラギノ角ゴProW3","HiraginoKakuGothicPro","メイリオ","Meiryo",sans-serif;-webkit-font-smoothing:antialiased;}img,picture,video,canvas,svg{display:block;max-width:100%;}input,button,textarea,select{font:inherit;}p,h1,h2,h3,h4,h5,h6{font-size:1rem;font-weight:normal;overflow-wrap:break-word;}p{hyphens:auto;}
+
+
+body {
+    display: grid;
+    grid-template-rows: 56px minmax(0, 1fr) 16px;
+}
+
+#header {
+    grid-row: 1 / 2;
+    background: #395060;
+}
+
+#main {
+    grid-row: 2 / 3;
+    background: #9FB9C6;
+}
+
+#footer {
+    grid-row: 3 / 4;
+    background: #608A9F;
+}
+
+
+.btn {
+    padding: 2px 12px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+}

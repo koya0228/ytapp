@@ -1,0 +1,100 @@
+.form-outer {
+    width: 100%;
+    padding: 72px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 60%;
+    padding: 48px 0;
+    box-sizing: border-box;
+    background: #FEFEFE;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+.form-container > form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.form-container > form label {
+    width: 100%;
+    text-align-last: left;
+}
+
+.form-container > form label > div {
+    display: flex;
+    gap: 4px;
+}
+.form-container > form label > div > button.delete-urlbox {
+    width: 32px;
+    height: 32px;
+    aspect-ratio: 1;
+    border: 0;
+    border-radius: 50%;
+}
+
+.form-container > form label p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.form-container > form input[type="text"] {
+    width: 100%;
+    min-width: 100%;
+    height: 32px;
+    border: 2px solid #AAAAAA;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .25);
+}
+
+#addUrlBox {
+    padding: 2px 20px;
+    background: #FEFEFE;
+    color: #FEFEFE;
+    position: relative;
+    z-index: 0;
+}
+#addUrlBox::before {
+    content: "";
+    display: block;
+    width: calc(100% - 8px);
+    height: 100%;
+    background: #9FB9C6;
+    border: 4px solid #FEFEFE;
+    border-top: 0;
+    border-bottom: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+}
+#addUrlBox::after {
+    content: "";
+    display: block;
+    width: 40vw;
+    height: 2px;
+    margin: 0 2px;
+    background: #9FB9C6;
+    border-radius: 9999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -2;
+}
+
+.form-container > form button[type="submit"] {
+    width: 100%;
+    background: #608A9F;
+    color: #FEFEFE;
+}
