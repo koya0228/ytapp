@@ -22,7 +22,8 @@ global.YouTubePlayer = YouTubePlayer;
         const playerId = `player${playerElem.getAttribute('value')}`;
         playerElem.setAttribute('id', playerId);
         if (i == 0) {
-            playerElem.classList.add('main-player');
+            const thisPlayerOuter = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"`);
+            thisPlayerOuter.classList.add('main-player');
         }
 
         let player;

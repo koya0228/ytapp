@@ -8,6 +8,8 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/layout.css',
                 'resources/css/form.css',
+                'resources/css/player.css',
+
                 'resources/js/app.js',
                 'resources/js/form.js',
                 'resources/js/player.js'

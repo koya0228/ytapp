@@ -4,6 +4,7 @@
 body {
     display: grid;
     grid-template-rows: 56px minmax(0, 1fr) 16px;
+    overflow: hidden;
 }
 
 #header {
