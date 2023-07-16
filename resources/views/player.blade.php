@@ -8,7 +8,7 @@
     @if (!$ytdatas)
         <p>no data</p>
     @else
-        <div class="toolbar">
+        <div class="toolbar shadow">
             <div id="allController">
                 <button id="allBack"><</button>
                 <button id="allPlayStop">O</button>
@@ -19,7 +19,8 @@
             <div id="ytplayerOuter" class="ytplayer-outer">
 
                 @foreach ($ytdatas as $ytdata)
-                    <div class="ytplayer-container" value="{{ $ytdata->id }}">
+                    <div class="ytplayer-container shadow" value="{{ $ytdata->id }}">
+                        <button class="player-switcher">switch</button>
                         <div class="video-outer">
                             <div class="ytplayer" name="{{ $ytdata->video_id }}" value="{{ $ytdata->id }}"></div>
                         </div>
@@ -36,7 +37,7 @@
                         </div>
                     </div>
                 @endforeach
-                
+
             </div>
         </div>
     @endif

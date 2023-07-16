@@ -10,16 +10,19 @@ body {
 #header {
     grid-row: 1 / 2;
     background: #395060;
+    z-index: 10;
 }
 
 #main {
     grid-row: 2 / 3;
     background: #9FB9C6;
+    z-index: 0;
 }
 
 #footer {
     grid-row: 3 / 4;
     background: #608A9F;
+    z-index: 10;
 }
 
 
@@ -28,4 +31,8 @@ body {
     font-weight: bold;
     border: 0;
     border-radius: 0;
+}
+
+.shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
 }

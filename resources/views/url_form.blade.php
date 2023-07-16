@@ -9,7 +9,7 @@
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
-        <div class="form-container">
+        <div class="form-container shadow">
             <form action={{ route('player.store') }} method="post" id="urlPostForm">
                 @csrf
                 <label>

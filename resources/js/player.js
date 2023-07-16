@@ -35,6 +35,13 @@ global.YouTubePlayer = YouTubePlayer;
 
         videoPlayerDict[playerElem.getAttribute('value')] = player;
 
+        let playerSwitcher = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"] > .player-switcher`);
+        playerSwitcher.addEventListener('click', () => {
+            let mainPlayer = document.querySelector('.ytplayer-container.main-player');
+            mainPlayer.classList.remove('main-player');
+            document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"]`).classList.add('main-player');
+        })
+
         let controllerElem = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"] > .ytplayer-controller`);
         controllerElem.querySelector('.playStop').addEventListener('click', () => {
             playPauseVideo(playerElem.getAttribute('value'));
