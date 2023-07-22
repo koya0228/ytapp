@@ -10,9 +10,15 @@
     @else
         <div class="toolbar shadow">
             <div id="allController">
-                <button id="allBack"><</button>
-                <button id="allPlayStop">O</button>
-                <button id="allForward">></button>
+                <button id="allBack">
+                    <x-svg svg=back></x-svg>
+                </button>
+                <button id="allPlayStop">
+                    <x-svg svg=play></x-svg>
+                </button>
+                <button id="allForward">
+                    <x-svg svg=forward></x-svg>
+                </button>
             </div>
         </div>
         <div class="ytplayers-container">
@@ -20,7 +26,9 @@
 
                 @foreach ($ytdatas as $ytdata)
                     <div class="ytplayer-container shadow" value="{{ $ytdata->id }}">
-                        <button class="player-switcher">switch</button>
+                        <button class="player-switcher">
+                            <x-svg svg=switch></x-svg>
+                        </button>
                         <div class="video-outer">
                             <div class="ytplayer" name="{{ $ytdata->video_id }}" value="{{ $ytdata->id }}"></div>
                         </div>
@@ -28,9 +36,15 @@
                             <div class="volume-controller">
                             </div>
                             <div class="play-controller">
-                                <button class="back"><</button>
-                                <button class="playStop">O</button>
-                                <button class="forward">></button>
+                                <button class="back">
+                                    <x-svg svg=back></x-svg>
+                                </button>
+                                <button class="playStop">
+                                    <x-svg svg=play></x-svg>
+                                </button>
+                                <button class="forward">
+                                    <x-svg svg=forward></x-svg>
+                                </button>
                             </div>
                             <div class="yt-link">
                             </div>
