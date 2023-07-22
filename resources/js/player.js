@@ -35,7 +35,7 @@ global.YouTubePlayer = YouTubePlayer;
 
         videoPlayerDict[playerElem.getAttribute('value')] = player;
 
-        let playerSwitcher = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"] > .player-switcher`);
+        let playerSwitcher = document.querySelector(`.ytplayer-container[value="${ playerElem.getAttribute('value') }"] .player-switcher`);
         playerSwitcher.addEventListener('click', () => {
             let mainPlayer = document.querySelector('.ytplayer-container.main-player');
             mainPlayer.classList.remove('main-player');

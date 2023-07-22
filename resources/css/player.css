@@ -6,16 +6,28 @@
 
 .toolbar {
     grid-row: 1 / 2;
-    background: #E0E0E0;
+    background: #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .toolbar > #allController {
+    height: 100%;
     display: flex;
     gap: 4px;
     align-items: center;
+}
+
+.toolbar > #allController button {
+    height: 60%;
+    aspect-ratio: 1;
+    background: transparent;
+    border: 0;
+}
+
+.toolbar > #allController button svg {
+    fill: #3e3e3e;
 }
 
 .ytplayers-container {
@@ -43,7 +55,7 @@
 .ytplayer-container {
     padding: 24px;
     box-sizing: border-box;
-    background: #E0E0E0;
+    background: #e0e0e0;
     border-radius: 16px;
 }
 .ytplayer-container.main-player {
@@ -55,6 +67,28 @@
 .ytplayer-container:not(.main-player) {
     width: 38%;
     margin-left: 62%;
+}
+
+.subplayer-header {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    justify-content: end;
+}
+
+.player-switcher {
+    height: 100%;
+    aspect-ratio: 1;
+    background: transparent;
+    border: 0;
+}
+
+.player-switcher svg {
+    fill: #3e3e3e;
+}
+
+.ytplayer-container.main-player .subplayer-header {
+    display: none;
 }
 
 .video-outer {
@@ -74,7 +108,7 @@ iframe {
     width: 100%;
     height: 28px;
     padding: 2px;
-    background: #608A9F;
+    background: #608a9f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,4 +122,10 @@ iframe {
 .play-controller > button {
     height: 100%;
     aspect-ratio: 1;
+    background: transparent;
+    border: 0;
+}
+
+.play-controller > button svg {
+    fill: #e0e0e0;
 }

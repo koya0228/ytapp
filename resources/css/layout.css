@@ -25,6 +25,10 @@ body {
     z-index: 10;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 .btn {
     padding: 2px 12px;

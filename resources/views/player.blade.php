@@ -26,9 +26,11 @@
 
                 @foreach ($ytdatas as $ytdata)
                     <div class="ytplayer-container shadow" value="{{ $ytdata->id }}">
-                        <button class="player-switcher">
-                            <x-svg svg=switch></x-svg>
-                        </button>
+                        <div class="subplayer-header">
+                            <button class="player-switcher">
+                                <x-svg svg=switch></x-svg>
+                            </button>
+                        </div>
                         <div class="video-outer">
                             <div class="ytplayer" name="{{ $ytdata->video_id }}" value="{{ $ytdata->id }}"></div>
                         </div>
